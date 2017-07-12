@@ -1,0 +1,32 @@
+body{
+	background-color: #F5F5F5;
+}
+ul li{
+	list-style: none;
+}
+.logo{
+	margin-top: -15px;
+}
+#navigation li:hover{
+	background-color: #E7E7E7;
+}
+.mian{
+	margin: 0 auto;
+}
+.footer{
+	border-top: 1px solid #ccc;
+	margin-top: 30px;
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+} 
+.footer p{
+	font-size: 14px;
+	font-weight: normal;
+}
+
+
+/* shares.html style */
+a.view-all{
+	float: right;
+}

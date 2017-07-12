@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>小萝卜 -- 首页</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+     <link href="css/common.css" rel="stylesheet">
+     <link href="css/contact.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- 导航条 -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" class="logo">
+                </a>
+                <a href="#" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav" id="navigation">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">学习<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li><a href="notes.html">原创笔记</a></li>
+                            <li><a href="shares.html">资源分享</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="essay.html">随笔</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">轻松一刻<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li><a href="games.html">小游戏</a></li>
+                            <li><a href="sales.html">二手物品</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resume.html">个人简历</a></li>
+                    <li class="active"><a href="contact.html">联系我</a></li>             
+                </ul>
+            
+                <!-- 注册、登录 -->
+                <a data-toggle="modal" href="#register" class="navbar-right navbar-text btn-xs btn btn-info">注册</a>
+                <span class="navbar-right navbar-text">|</span>
+                <a data-toggle="modal" href="#login" class="navbar-right navbar-text btn-xs btn btn-info">登录</a>
+
+                <!-- 搜索 -->
+                <form action="" class="navbar-form navbar-right">
+                    <label for="search" class="sr-only">请输入搜索内容：</label>          
+                    <div class="input-group">
+                      <input type="text" class="form-control search" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                          <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                      </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+
+    <!-- 模态框 -->
+    <!-- 注册 -->
+    <div class="modal bs-xample-modal-lg" id="register">  <!-- 全屏的半透明遮罩层 -->
+        <div class="modal-dialog modal-lg">  <!-- 宽高、定位 -->
+            <div class="modal-content"> <!-- 背景色、边框、倒角、阴影 -->
+                <div class="modal-header"><h3>新用户注册</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repwd">确认密码：</label>
+                            <input type="text" id="repwd" class="form-control" placeholder="Please Enter Your Password Again">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">手机号码：</label>
+                            <input type="text" id="tel" class="form-control" placeholder="Please Enter Your Tel Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱地址：</label>
+                            <input type="email" id="email" class="form-control" placeholder="Please Enter Your Email Address">
+                        </div>
+                         <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">自动登录
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-success" value="Submit">
+                    <input data-dismiss="modal" type="button" class="btn btn-success" value="Cancel">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录 -->
+    <div class="modal bs-xample-modal-sm" id="login">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header"><h3>登录</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">我同意本站的注册条款
+                                </label>
+                            </div>
+                        </div>
+                        <input type="button" class="btn btn-danger" value="Login">
+                        <input data-dismiss="modal" type="button" class="btn btn-danger" value="Cancel">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="container">
+        <div class="left">
+            <div class="list-group"  data-spy="affix" data-offset-top="220">
+                <a class="list-group-item active" href="#about-us">关于本站</a>
+                <a class="list-group-item" href="#contact-us">联系我们</a>
+                <a class="list-group-item" href="#feedback">意见反馈</a>
+                <a class="list-group-item" href="#links">友情链接</a>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="panel panel-info">
+                <div class="panel-heading" id="about-us">关于本站<span>About us</span></div>
+                    <div class="panel-body">
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis pariatur cumque iure libero at, saepe sapiente recusandae temporibus cum accusamus suscipit eligendi quae! Dolor quis, accusamus culpa non doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima harum, accusantium non accusamus, temporibus labore, obcaecati incidunt ea, facilis rem aperiam sed sapiente eius quas tenetur. Corporis et sunt velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos ullam nemo repudiandae? Sapiente ex eaque ea dignissimos, quas quos officia earum, enim facilis accusantium sit, tempora, natus dolorem quam.</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" id="contact-us">联系我们<span>Contact us</span></div>
+                    <div class="panel-body">
+                        <p>地址：XXXXXXXXXXXXXX</p>
+                        <p>电话：0000-00000000</p>
+                        <p>邮箱：123456@126.com</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" id="feedback">意见反馈<span>FeedBack</span></div>
+                    <div class="panel-body">
+                        <textarea class="form-control" rows="3" placeholder="请留下您的宝贵意见"></textarea>
+                        <button class="btn btn-success btn-sm" type="submit">提交</button>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" id="links">友情链接<span>Links</span></div>
+                    <div class="panel-body">
+                        <ul class="friendly-links">
+                            <li><a href="http://www.cnblogs.com/xlb-happymoment/"><span class="sr-icon icon-blog"></span>我的博客</a></li>
+                            <li><a href="https://github.com/Shelly-xlb"><span class="sr-icon icon-git"></span>github</a></li>
+                            <li><a href="resume.html"><span class="sr-icon icon-resume"></span>我的简历</a></li>
+                            <li><a href="games.html"><span class="sr-icon icon-games"></span>小游戏</a></li>
+                            <li><a href="games.html"><span class="sr-icon icon-shop"></span>二手杂货铺</a></li>
+                        </ul>
+
+                        <ul class="friendly-links">
+                            <li><a href="http://www.csdn.net/"><span class="sr-icon icon-csdn"></span>CSDN</a></li>
+                            <li><a href="https://segmentfault.com/"><span class="sr-icon icon-sf"></span>SegmentFault</a></li>
+                            <li><a href="http://www.jobbole.com/"><span class="sr-icon icon-job"></span>伯乐在线</a></li>
+                            <li><a href="http://www.bootcdn.cn/l"><span class="sr-icon icon-bs"></span>BootCDN</a></li>
+                            <li><a href="https://juejin.im/timeline"><span class="sr-icon icon-jj"></span>掘金</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>copyright&copy;小萝卜</p>
+    </div>
+        
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootlint.js"></script>
+  </body>
+</html>

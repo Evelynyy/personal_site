@@ -1,0 +1,316 @@
+.carousel-inner{
+	opacity: 0.6;	
+}
+.leading{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width:15%;
+	height: 8%;
+	margin-top: 20%;
+	margin-left: 43%;
+	opacity: 0.9;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	filter: alpha(opacity=90);
+}
+/* 面包屑导肮 */
+.breadcrumb{
+	margin-top: 20px;
+}
+/* section style */
+section{	
+	width: 100%;
+    margin-top: 80px;
+}
+/* section部分 左侧CSS3动画 */
+.box-left{
+	float: left;
+    width: 400px;
+    height: 400px;
+    perspective: 100px;
+}
+.orbit{
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px dashed gray;
+    margin: 0;
+    padding: 0;
+}
+.orbit1{
+    width: 400px;
+    height: 400px;
+}
+.orbit2{
+    width: 250px;
+    height: 250px;
+    margin: 75px;
+}
+.ball{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.outer{            
+    animation: outer 10s linear 0s infinite;
+}
+.inner{            
+    animation: inner 5s linear 0s infinite;
+}
+.ball1{
+    float: left;
+    position: relative;
+    top: 175px;
+    left: -25px;
+    background-color: #bfb; 
+    transform-origin: 225px 25px;
+}
+.ball2{
+    float: left;
+    position: relative; 
+    top: 0px;
+    left: 30px;  
+    background-color: #fbb;
+    transform-origin: 120px 200px;
+}
+.ball3{
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 180px; 
+    background-color: #bbf;
+    transform-origin: -80px 190px;
+}
+.ball4{
+    float: left;
+    position: relative;
+    top: 175px;
+    left: 225px; 
+    background-color: #ffb;
+    transform-origin: -175px 25px;
+}
+.ball5{
+    float: left;
+    position: relative;
+    top: 345px;
+    left: 75px; 
+    background-color: #bbf;
+    transform-origin: -75px -145px;
+}
+.ball6{
+    float: left;
+    position: relative;
+    top: 345px;
+    left: -180px;
+    background-color: #ffb;
+    transform-origin: 130px -145px;
+}
+.ball7{
+    float: left;
+    position: relative;
+    top: 35px;
+    left: -5px;
+    background-color: #fbf;
+    transform-origin: 130px 90px; 
+}
+.ball8{
+    float: left;
+    position: relative;
+    top: -15px;
+    left: 90px;
+    background-color: #bff;
+    transform-origin: -15px 140px;            
+}
+.ball9{
+    float: left;
+    position: relative;
+    top: 100px;
+    left: 120px;
+    background-color: #faa;
+    transform-origin: -95px 25px;            
+}
+.ball10{
+    float: left;
+    position: relative;
+    top: 220px;
+    left: -15px;
+    background-color: #afb;
+    transform-origin: -15px -95px;            
+}
+.ball11{
+    float: left;
+    position: relative;
+    top: 120px;
+    left: 0px;
+    background-color: #afb;
+    transform-origin: 125px -45px;            
+}
+@keyframes outer{
+    from{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes inner{
+    from{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-90deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    75%{
+        transform: rotate(-270deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+/* section部分 右侧简介 */
+.box-right{
+	float: left;
+	width: 700px;
+	height: 400px;
+	/*border: 1px solid #f00;*/
+	margin-left: 40px;
+}
+.box-right p{
+	font-size: 16px;
+	color: #333;
+	text-indent: 20px;
+	letter-spacing: 1px;	
+}
+
+/* 主体部分 */
+/* 主体左部分 */
+.side-left{
+    width: 70%;
+    float: left;
+    margin-left: 50px;
+}
+.part-icon{
+    display: inline-block;
+    float: left;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: -2px;
+    margin-right: 5px;  
+}
+.icon-essay{
+    background: url('../img/essay.png') no-repeat;    
+}
+.icon-goods{
+    background: url('../img/goods.png') no-repeat;
+    top: -5px;
+}
+/* 随笔 */
+.part-essay{
+	clear: both;
+    width: 100%;
+	padding-top: 50px;
+}
+.media-list{	
+	float: left;
+}
+.media-left{
+	padding-right: 20px;
+}
+.part-sales{
+    clear: both;
+    width: 100%;
+    padding-top: 30px;
+}
+.part-sales figure {
+    margin-right: 10px;
+    /*border: 1px solid #f00;*/
+    float: left;
+    width: 255px;
+    height: 295px;
+    text-align: center;
+    padding: 10px;
+}
+.price span{
+    background-color: #FF4200;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 25px;
+    padding: 5px;
+    font-size: 16px;
+}
+.part-sales figure:hover{
+    border: 1px solid #D15957;
+}
+/* 主体右侧栏 */
+.side-right{
+    width: 25%;
+    float: right; 
+    padding-left: 50px;
+    padding-top: 100px;
+}
+.side-right h3{
+    font-size: 18px;
+    font-weight: normal;
+}
+.side-right a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.sr-icon{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: -2px;
+    width: 16px;
+    height: 16px;
+}
+.icon-link{    
+    background: url('../img/index-link.png') no-repeat;    
+}
+.icon-blog{
+    background: url('../img/favicon.bmp') no-repeat;
+}
+.icon-git{
+    position: relative;
+    top: 5px;
+    background: url('../img/fluidicon.png') no-repeat;
+}
+.icon-resume{
+    background: url('../img/resume.png') no-repeat;
+}
+.icon-games{
+    background: url('../img/game-icon.png') no-repeat;
+}
+.icon-shop{
+    background: url('../img/shop-icon.png') no-repeat;
+}
+.sub-nav{
+    margin-top: 275px;
+    float: right;
+}
+.list-group{
+    text-align: center;
+}
+.sub-nav a{
+    color: #333;
+    height: 40px;
+    padding: 5px 20px;
+}

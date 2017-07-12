@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>小萝卜 -- 小游戏</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/2048.css">  
+    <link rel="stylesheet" href="css/puzzleGame.css">  
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <!-- 导航条 -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" class="logo">
+                </a>
+                <a href="#" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav" id="navigation">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">学习<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li><a href="notes.html">原创笔记</a></li>
+                            <li><a href="shares.html">资源分享</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="essay.html">随笔</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">轻松一刻<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li class="active"><a href="games.html">小游戏</a></li>
+                            <li><a href="sales.html">二手物品</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resume.html">个人简历</a></li>
+                    <li><a href="contact.html">联系我</a></li>             
+                </ul>
+            
+                <!-- 注册、登录 -->
+                <a data-toggle="modal" href="#register" class="navbar-right navbar-text btn-xs btn btn-info">注册</a>
+                <span class="navbar-right navbar-text">|</span>
+                <a data-toggle="modal" href="#login" class="navbar-right navbar-text btn-xs btn btn-info">登录</a>
+
+                <!-- 搜索 -->
+                <form action="" class="navbar-form navbar-right">
+                    <label for="search" class="sr-only">请输入搜索内容：</label>          
+                    <div class="input-group">
+                      <input type="text" class="form-control search" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                          <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                      </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+
+    <!-- 模态框 -->
+    <!-- 注册 -->
+    <div class="modal bs-xample-modal-lg" id="register">  <!-- 全屏的半透明遮罩层 -->
+        <div class="modal-dialog modal-lg">  <!-- 宽高、定位 -->
+            <div class="modal-content"> <!-- 背景色、边框、倒角、阴影 -->
+                <div class="modal-header"><h3>新用户注册</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repwd">确认密码：</label>
+                            <input type="text" id="repwd" class="form-control" placeholder="Please Enter Your Password Again">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">手机号码：</label>
+                            <input type="text" id="tel" class="form-control" placeholder="Please Enter Your Tel Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱地址：</label>
+                            <input type="email" id="email" class="form-control" placeholder="Please Enter Your Email Address">
+                        </div>
+                         <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">我同意本站的注册条款
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-success" value="Submit">
+                    <input data-dismiss="modal" type="button" class="btn btn-success" value="Cancel">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录 -->
+    <div class="modal bs-xample-modal-sm" id="login">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header"><h3>登录</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">自动登录
+                                </label>
+                            </div>
+                        </div>
+                        <input type="button" class="btn btn-danger" value="Login">
+                        <input data-dismiss="modal" type="button" class="btn btn-danger" value="Cancel">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="main">
+        <div class="container">
+            <ol class="breadcrumb">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="#">轻松一刻</a></li>
+              <li class="active">小游戏</li>
+            </ol>
+
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#move">2048</a></li>
+              <li><a data-toggle="tab" href="#puzzle">拼图小游戏</a></li>
+              <li><a data-toggle="tab" href="#airplane">飞机大战</a></li>
+            </ul>        
+            <div class="tab-content">
+                <div class="tab-pane active fade in" id="move">
+                    <!-- 分数 -->
+                    <p>Score:<span id="score">0</span></p>                
+                    <!-- 实现游戏的网格 -->
+                    <div id="gridPanel">
+                    </div>  
+
+                    <div id="gameOver"><!--同时包含前景和背景的容器-->
+                        <div><!--半透明灰色背景--></div>
+                        <p><!--居中小窗口-->
+                            Game Over!<br>
+                            Score:<span id="finalScore"></span><br>
+                            <a class="button" id="restart" onclick="game.start()">Try again!</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="tab-pane fade in" id="puzzle">
+                    <div id="wrap">
+                        <div id="character">
+                            <ul>
+                                <li id="gameRule"> 游戏介绍：
+                                    <p class="game-tips">1、点击游戏难度以更改</p>
+                                    <p class="game-tips">2、点击开始游戏，打乱图片</p>
+                                    <p class="game-tips">3、交换图片位置，复原图片</p>
+                                </li>
+                            </ul>
+                            <ul class="orgimage">
+                                <img src="img/puzzle.jpg">
+                            </ul>
+                        </div>
+                        <div id="content">
+                            <ul>
+                                <li id="start"><span><button class="btn btn-info" style="margin-right: 10px;">开始游戏</button></span> </li>
+                                <li id="level">
+                                    <span><button class="btn btn-info">难度选择:</button>
+                                        <select class="target">
+                                            <option value='{"row":3,"col":3}' selected="selected">3 * 3</option>
+                                            <option value='{"row":6,"col":6}'>6 * 6</option>
+                                            <option value='{"row":9,"col":9}'>9 * 9</option>
+                                        </select>
+                                    </span>
+                                </li>
+                            </ul>
+                            <div id="imgArea"></div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="tab-pane fade in" id="airplane">
+                    <div style="margin:0 auto;width:480px; height:650px;background:#323232; text-align:center;vertical-align:middle">
+                        <canvas id="canvas" width="480px" height="650px"><canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>copyright&copy;小萝卜</p>
+    </div>
+
+    
+        
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootlint.js"></script>      
+    <script src="js/animation.js"></script>
+    <script src="js/2048.js"></script>
+    <script src="js/puzzleGame.js"></script>
+    <script src="js/play.js"></script>
+    <script src="js/fly.js"></script>
+  </body>
+</html>

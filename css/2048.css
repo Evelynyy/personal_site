@@ -1,0 +1,114 @@
+/*2048.css*/
+@charset "utf-8";
+
+#gridPanel{
+	width: 480px;
+	height: 480px;
+	margin: 0 auto;
+	background-color: #bbada0;
+	border-radius: 10px;
+	position: relative;
+}
+.grid, .cell{
+	width: 100px;
+	height: 100px;
+	border-radius: 6px;
+}
+.grid{
+	background-color: #ccc0b3;
+	float: left;
+	margin-top: 16px;
+	margin-left: 16px;
+}
+.cell{
+	text-align: center;
+	line-height: 100px;
+	color: #fff;
+	font-size: 60px;
+	position: absolute;
+}
+
+/*由于想要更改游戏的网格数，设置了最大限制为8*8，所以此处前景格和背景格的样式如下*/
+/*此功能的实现应该还有更简便的方法，能力有限，目前学的知识只能做到这样*/
+#c00, #c01, #c02, #c03, #c04, #c05, #c06, #c07{top: 16px;}
+#c10, #c11, #c12, #c13, #c14, #c15, #c16, #c17{top: 132px;}
+#c20, #c21, #c22, #c23, #c24, #c25, #c26, #c27{top: 248px;}
+#c30, #c31, #c32, #c33, #c34, #c35, #c36, #c37{top: 364px;}
+#c40, #c41, #c42, #c43, #c44, #c45, #c46, #c47{top: 480px;}
+#c50, #c51, #c52, #c53, #c54, #c55, #c56, #c57{top: 596px;}
+#c60, #c61, #c62, #c63, #c64, #c65, #c66, #c67{top: 712px;}
+#c70, #c71, #c72, #c73, #c74, #c75, #c76, #c77{top: 828px;}
+
+#c00, #c10, #c20, #c30, #c40, #c50, #c60, #c70{left: 16px;}
+#c01, #c11, #c21, #c31, #c41, #c51, #c61, #c71{left: 132px;}
+#c02, #c12, #c22, #c32, #c42, #c52, #c62, #c72{left: 248px;}
+#c03, #c13, #c23, #c33, #c43, #c53, #c63, #c73{left: 364px;}
+#c04, #c14, #c24, #c34, #c44, #c54, #c64, #c74{left: 480px;}
+#c05, #c15, #c25, #c35, #c45, #c55, #c65, #c75{left: 596px;}
+#c06, #c16, #c26, #c36, #c46, #c56, #c66, #c76{left: 712px;}
+#c07, #c17, #c27, #c37, #c47, #c57, #c67, #c77{left: 828px;}
+
+.n2{background-color: #eee3da;}
+.n4{background-color: #ede0c8;}
+.n8{background-color: #f2b179;}
+.n16{background-color: #f59563;}
+.n32{background-color: #f67c5f;}
+.n64{background-color: #f65e3d;}
+.n128{background-color: #edcf72;}
+.n256{background-color: #edcc61;}
+.n512{background-color: #9c0;}
+.n1024{background-color: #33b5e5;}
+.n2048{background-color: #09c;}
+.n4096{background-color: #a6c;}
+.n8192{background-color: #93c;}
+
+.n2, .n4{color: #776e65;}
+.n1024, .n2048, .n4096, .n8192{font-size: 40px;}
+
+/*显示分数*/
+p{
+	width: 480px;
+	margin: 0 auto;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 40px;
+	padding-top: 0px;
+}
+
+/* 游戏结束 */
+/*Game Over*/
+#gameOver{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+ 	display:none;
+}
+#gameOver>div{
+	width:100%;
+	height:100%;
+ 	background-color:#555;
+ 	opacity:0.5;
+}
+#gameOver>p{
+	width:300px;
+	height:200px;
+ 	border:1px solid #edcf72;
+ 	line-height:1.6em;
+ 	text-align:center;
+ 	background-color:#fff;
+ 	border-radius:10px;
+ 	position:absolute;
+ 	top:50%;
+ 	left:50%;
+ 	margin-top:-100px;
+ 	margin-left:-150px;
+}
+.button{
+	padding:10px;
+	border-radius:6px;
+ 	background-color:#9f8b77;
+ 	color:#fff;
+ 	cursor:pointer;
+}

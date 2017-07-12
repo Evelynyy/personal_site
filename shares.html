@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>小萝卜 -- 资源分享</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+     <link href="css/common.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <!-- 导航条 -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" class="logo">
+                </a>
+                <a href="#" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav" id="navigation">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">学习<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li><a href="notes.html">原创笔记</a></li>
+                            <li class="active"><a href="shares.html">资源分享</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="essay.html">随笔</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">轻松一刻<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li><a href="games.html">小游戏</a></li>
+                            <li><a href="sales.html">二手物品</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resume.html">个人简历</a></li>
+                    <li><a href="contact.html">联系我</a></li>             
+                </ul>
+            
+                <!-- 注册、登录 -->
+                <a data-toggle="modal" href="#register" class="navbar-right navbar-text btn-xs btn btn-info">注册</a>
+                <span class="navbar-right navbar-text">|</span>
+                <a data-toggle="modal" href="#login" class="navbar-right navbar-text btn-xs btn btn-info">登录</a>
+
+                <!-- 搜索 -->
+                <form action="" class="navbar-form navbar-right">
+                    <label for="search" class="sr-only">请输入搜索内容：</label>          
+                    <div class="input-group">
+                      <input type="text" class="form-control search" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                          <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                      </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+
+    <!-- 模态框 -->
+    <!-- 注册 -->
+    <div class="modal bs-xample-modal-lg" id="register">  <!-- 全屏的半透明遮罩层 -->
+        <div class="modal-dialog modal-lg">  <!-- 宽高、定位 -->
+            <div class="modal-content"> <!-- 背景色、边框、倒角、阴影 -->
+                <div class="modal-header"><h3>新用户注册</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repwd">确认密码：</label>
+                            <input type="text" id="repwd" class="form-control" placeholder="Please Enter Your Password Again">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">手机号码：</label>
+                            <input type="text" id="tel" class="form-control" placeholder="Please Enter Your Tel Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱地址：</label>
+                            <input type="email" id="email" class="form-control" placeholder="Please Enter Your Email Address">
+                        </div>
+                         <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">我同意本站的注册条款
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-success" value="Submit">
+                    <input data-dismiss="modal" type="button" class="btn btn-success" value="Cancel">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录 -->
+    <div class="modal bs-xample-modal-sm" id="login">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header"><h3>登录</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">自动登录
+                                </label>
+                            </div>
+                        </div>
+                        <input type="button" class="btn btn-danger" value="Login">
+                        <input data-dismiss="modal" type="button" class="btn btn-danger" value="Cancel">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <div class="main">      
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">学习</a></li>
+                <li class="active">资源分享</li>
+            </ol>
+
+            <div class="row">
+                <!-- main context -->
+                <div class="col-xs-10">
+                    <h3 id="context1">Context1&nbsp;&nbsp;About</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores, ab doloremque soluta, quidem explicabo tempore velit aperiam labore ex……<a class="view-all" class="view-all" href="#">查看全文</a></p>
+              
+                    <h3 id="context2">Context2&nbsp;&nbsp;Childhood</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores, ab doloremque soluta, quidem explicabo tempore velit aperiam labore ex……<a class="view-all" href="#">查看全文</a></p>
+               
+                    <h3 id="context3">Context3&nbsp;&nbsp;Teenager</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores, ab doloremque soluta, quidem explicabo tempore velit aperiam labore ex nobis……<a class="view-all" href="#">查看全文</a></p>
+               
+                    <h3 id="context4">Context4&nbsp;&nbsp;Adult</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores, ab doloremque soluta, quidem explicabo tempore velit aperiam labore……<a class="view-all" href="#">查看全文</a></p>
+
+                    <h3 id="context5">Context5&nbsp;&nbsp;Adult</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores, ab doloremque soluta, quidem explicabo tempore velit aperiam labore ex……<a class="view-all" href="#">查看全文</a></p>
+
+                    <h3 id="context6">Context6&nbsp;&nbsp;Adult</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores……<a class="view-all" href="#">查看全文</a></p>
+
+                    <h3 id="context7">Context7&nbsp;&nbsp;Adult</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores, ab doloremque soluta, quidem explicabo tempore velit aperiam labore ex……<a class="view-all" href="#">查看全文</a></p>
+
+                    <h3 id="context8">Context8&nbsp;&nbsp;Adult</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias commodi sed, sint quo facilis qui expedita ratione saepe non mollitia quidem soluta voluptatum. Iure culpa voluptatibus obcaecati, ex quae sunt. Assumenda placeat sed, quam ratione debitis. Laudantium facilis ullam illum quibusdam, autem minima ratione alias dignissimos quae voluptas eos rem reiciendis, necessitatibus libero veniam. Odit quia suscipit accusamus sequi quaerat? Autem quo iusto eum asperiores……<a class="view-all" href="#">查看全文</a></p>
+
+                    <nav style="text-align: right;">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- 附加导航 -->
+                <div class="col-xs-2">
+                    <div data-spy="affix" data-offset-top="220">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#context1">Context One</a></li>
+                            <li><a href="#context2">Context Two</a></li>
+                            <li><a href="#context3">Context Three</a></li>
+                            <li><a href="#context4">Context Four</a></li>
+                            <li><a href="#context5">Context Five</a></li>
+                            <li><a href="#context6">Context Six</a></li>
+                            <li><a href="#context7">Context Seven</a></li>
+                            <li><a href="#context8">Context Eight</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>copyright&copy;小萝卜</p>
+    </div>
+        
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootlint.js"></script>
+  </body>
+</html>

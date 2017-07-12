@@ -1,0 +1,79 @@
+.left{
+	width: 20%;
+	float: left;
+}
+.list-group{
+	text-align: center;
+}
+.right{
+	float: right;
+	width: 75%;
+	border: 1px solid #eee;
+	/*height: 600px;*/
+	background-color: #fff;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-indent: 20px;
+}
+.right span{
+	margin-left: 20px;
+	font-style: italic;
+	font-size: 14px;
+	/*color: #3180B3;*/
+	opacity: .8;
+}
+.right button{
+	float: right;
+	margin-top: 5px;
+}
+.friendly-links{
+	float: left;
+	margin-right: 15px;
+}
+.friendly-links li a{
+	color: #555;
+	font-size: 14px;
+}
+.sr-icon{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: -2px;
+    width: 16px;
+    height: 16px;
+}
+.icon-link{    
+    background: url('../img/index-link.png') no-repeat;    
+}
+.icon-blog{
+    background: url('../img/favicon.bmp') no-repeat;
+}
+.icon-git{
+    position: relative;
+    top: 5px;
+    background: url('../img/fluidicon.png') no-repeat;
+}
+.icon-resume{
+    background: url('../img/resume.png') no-repeat;
+}
+.icon-games{
+    background: url('../img/game-icon.png') no-repeat;
+}
+.icon-shop{
+    background: url('../img/shop-icon.png') no-repeat;
+}
+.icon-csdn{
+    background: url('../img/favicon_csdn.bmp') no-repeat;
+}
+.icon-sf{
+    background: url('../img/favicon_sf.bmp') no-repeat;
+}
+.icon-job{
+    background: url('../img/favicon_job.png') no-repeat;
+}
+.icon-bs{
+    background: url('../img/favicon_bs.png') no-repeat;
+}
+.icon-jj{
+    background: url('../img/favicon_jj.png') no-repeat;
+}

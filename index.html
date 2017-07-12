@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>小萝卜 -- 首页</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- 轮播图 -->
+    <div class="box">
+        <div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
+            <!-- 图片加载容器 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="img-responsive" src="img/bg_image001.jpg">
+                </div>
+                <div class="item">
+                    <img class="img-responsive"  src="img/bg_image002.jpg">
+                </div>
+                <div class="item">
+                    <img class="img-responsive"  src="img/bg_image003.jpg">
+                </div>
+                <div class="item">
+                    <img class="img-responsive"  src="img/bg_image004.jpg">
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="img/bg_image005.jpg">
+                </div>
+            </div>
+            <a class="leading btn btn-danger" href="#navigation">Go to My Site</a>
+            <!-- <input type="button" class="btn btn-danger leading" value="Go to My Site" data-target="#navigation"> -->
+        </div>
+    </div>
+
+    <!-- 导航条 -->
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" class="logo">
+                </a>
+                <a href="#" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav" id="navigation">
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">学习<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li><a href="notes.html">原创笔记</a></li>
+                            <li><a href="shares.html">资源分享</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="essay.html">随笔</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">轻松一刻<span class="caret"></span></a>           
+                        <ul class="dropdown-menu">
+                            <li><a href="games.html">小游戏</a></li>
+                            <li><a href="sales.html">二手物品</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="resume.html">个人简历</a></li>
+                    <li><a href="contact.html">联系我</a></li>             
+                </ul>
+            
+                <!-- 注册、登录 -->
+                <a data-toggle="modal" href="#register" class="navbar-right navbar-text btn-xs btn btn-info">注册</a>
+                <span class="navbar-right navbar-text">|</span>
+                <a data-toggle="modal" href="#login" class="navbar-right navbar-text btn-xs btn btn-info">登录</a>
+
+                <!-- 搜索 -->
+                <form action="" class="navbar-form navbar-right">
+                    <label for="search" class="sr-only">请输入搜索内容：</label>          
+                    <div class="input-group">
+                      <input type="text" class="form-control search" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                          <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                      </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+
+    <!-- 模态框 -->
+    <!-- 注册 -->
+    <div class="modal bs-xample-modal-lg" id="register">  <!-- 全屏的半透明遮罩层 -->
+        <div class="modal-dialog modal-lg">  <!-- 宽高、定位 -->
+            <div class="modal-content"> <!-- 背景色、边框、倒角、阴影 -->
+                <div class="modal-header"><h3>新用户注册</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repwd">确认密码：</label>
+                            <input type="text" id="repwd" class="form-control" placeholder="Please Enter Your Password Again">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">手机号码：</label>
+                            <input type="text" id="tel" class="form-control" placeholder="Please Enter Your Tel Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱地址：</label>
+                            <input type="email" id="email" class="form-control" placeholder="Please Enter Your Email Address">
+                        </div>
+                         <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">我同意本站的注册条款
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-success" value="Submit">
+                    <input data-dismiss="modal" type="button" class="btn btn-success" value="Cancel">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录 -->
+    <div class="modal bs-xample-modal-sm" id="login">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header"><h3>登录</h3></div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="user">用户名：</label>
+                            <input type="text" id="user" class="form-control" placeholder="Please Enter Your UserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">密码：</label>
+                            <input type="text" id="pwd" class="form-control" placeholder="Please Enter Your Password">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">自动登录
+                                </label>
+                            </div>
+                        </div>
+                        <input type="button" class="btn btn-danger" value="Login">
+                        <input data-dismiss="modal" type="button" class="btn btn-danger" value="Cancel">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <section>
+        <div class="container">            
+            <div class="floor1">
+                <div class="box-left">
+                    <div class="orbit orbit1">
+                        <div class="ball outer ball1"></div>
+                        <div class="ball outer ball2"></div>
+                        <div class="ball outer ball3"></div>
+                        <div class="ball outer ball4"></div>
+                        <div class="ball outer ball5"></div>
+                        <div class="ball outer ball6"></div>
+                    </div>
+                   <div class="orbit orbit2">
+                       <div class="ball inner ball7"></div>
+                       <div class="ball inner ball8"></div>
+                       <div class="ball inner ball9"></div>
+                       <div class="ball inner ball10"></div>
+                       <div class="ball inner ball11"></div>
+                   </div>
+                </div>
+                <div class="box-right">
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus placeat vitae consequuntur. Nemo est excepturi repellat praesentium, hic impedit, sit temporibus aspernatur reprehenderit at ut, sint a vitae magni explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora perspiciatis, minima fugiat voluptatibus tenetur minus, dolore ullam dignissimos, optio provident earum iusto eveniet amet officia quibusdam dolorem cumque necessitatibus quasi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum harum, dolores quam repudiandae vitae neque laborum quae in blanditiis enim soluta eius esse voluptatum corrupti, deserunt quaerat beatae perferendis, sapiente. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum esse, nam temporibus et dolorum iure aperiam ea? Dolor provident aperiam eos officia soluta ipsam aspernatur voluptatibus deserunt! Architecto, sit, atque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dolore iste magni veritatis dignissimos, laudantium omnis eveniet amet corporis nostrum, at earum voluptates non quam consequatur officia error esse architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis adipisci rerum, obcaecati quia saepe eaque, illum sequi. Dolores tempore ipsa dicta cumque, deserunt inventore veniam blanditiis, pariatur nostrum alias beatae.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="mian">
+        <div class="container"> 
+            <div class="side-left">          
+                <div class="part-essay">
+                    <h3><span class="part-icon icon-essay"></span>随笔</h3>
+                    <div class="media-list">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img src="img/1.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3>花火</h3>
+                                <p>作品介绍：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nisi officia voluptatibus illo, reiciendis consequatur, dicta quo suscipit officiis, magnam repellat sit quaerat repudiandae quidem aliquam beatae eaque itaque quos.</p>
+                            </div>
+                         </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img src="img/2.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3>大漠</h3>
+                                <p>作品介绍：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi soluta perspiciatis expedita ullam vero quod ex, consequuntur fugit esse voluptatum dolorem commodi qui at non asperiores maiores sit, ducimus repudiandae.</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img src="img/3.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3>春意</h3>
+                                <p>作品描述：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum rem facilis error illum ut voluptas tempora sequi, nostrum unde cum laudantium magnam fugiat ullam repudiandae sint asperiores modi inventore fuga?</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                            <a href="#"><img src="img/4.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3>灯塔</h3>
+                                <p>作品介绍：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quis, doloremque esse culpa perspiciatis consequatur nulla nesciunt ducimus! Nesciunt, deserunt, dolore! Facilis nam veniam deleniti laboriosam libero, impedit veritatis aliquid.</p>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+
+                <div class="part-sales">
+                    <h3><span class="part-icon icon-goods"></span>二手物品</h3>
+                    <figure>
+                        <img src="img/goods2.jpg">
+                        <figcaption>
+                            <div class="goods-name"><h5><a href="#">《JavaScript高级程序设计》(第3版)</a></h5></div>
+                            <div class="price"><span>当前价：￥<strong>30</strong></span><s>当当价：￥74.2</s></div>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/goods4.jpg">
+                        <figcaption>
+                            <div class="goods-name"><h5><a href="#">《你不知道的JS》(上卷)</a></h5></div>
+                            <div class="price"><span>当前价：￥<strong>15</strong></span><s>当当价：￥32.9</s></div>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/goods7.jpg">
+                        <figcaption>
+                            <div class="goods-name"><h5><a href="#">《JavaScript面向对象编程指南》(第2版)</a></h5></div>
+                            <div class="price"><span>当前价：￥<strong>20</strong></span><s>当当价：￥46.3</s></div>
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div> 
+
+            <div class="side-right">
+                <h3><span class="sr-icon icon-link"></span>友情链接</h3>
+                <a href="http://www.cnblogs.com/xlb-happymoment/"><span class="sr-icon icon-blog"></span>我的博客</a>
+                <a href="https://github.com/Shelly-xlb"><span class="sr-icon icon-git"></span>github</a>
+                <a href="resume.html"><span class="sr-icon icon-resume"></span>我的简历</a>
+                <a href="games.html"><span class="sr-icon icon-games"></span>小游戏</a>
+                <a href="games.html"><span class="sr-icon icon-shop"></span>二手杂货铺</a>
+
+                <div class="list-group sub-nav">
+                   <a class="list-group-item" href="#navigation">首页</a>
+                   <a class="list-group-item" href="notes.html">原创笔记</a>
+                   <a class="list-group-item" href="essay.html">随笔</a>
+                   <a class="list-group-item" href="games.html">小游戏</a>
+                   <a class="list-group-item" href="resume.html">个人简历</a>
+                   <a class="list-group-item" href="contact.html">联系我</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>copyright&copy;小萝卜</p>
+    </div>
+        
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootlint.js"></script>
+  </body>
+</html>
